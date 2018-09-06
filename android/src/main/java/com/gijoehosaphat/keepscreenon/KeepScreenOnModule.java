@@ -25,7 +25,7 @@ public class KeepScreenOnModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void setKeepScreenOn(Boolean bKeepScreenOn) {
     final Activity activity = getCurrentActivity();
-    if (bKeepScreenOn == true) {
+    if (bKeepScreenOn) {
       if (activity != null) {
         activity.runOnUiThread(new Runnable() {
           @Override
@@ -34,7 +34,7 @@ public class KeepScreenOnModule extends ReactContextBaseJavaModule {
           }
         });
       }
-    } else if (bKeepScreenOn == false) {
+    } else {
       if (activity != null) {
         activity.runOnUiThread(new Runnable() {
           @Override
