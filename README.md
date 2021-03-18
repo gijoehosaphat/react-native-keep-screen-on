@@ -17,12 +17,6 @@ include ':KeepScreenOn'
 project(':KeepScreenOn').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-keep-screen-on/android')
 ```
 
-#### In `build.gradle` add the following line:
-
-```groovy
-compile project(':KeepScreenOn')
-```
-
 #### < [0.29] : In `MainActivity.java` add the following lines:
 
 ```java
